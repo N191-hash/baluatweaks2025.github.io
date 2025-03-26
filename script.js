@@ -113,5 +113,22 @@ function update() {
 // Bắt đầu tạo tuyết và cập nhật liên tục
 createSnowflakes();
 update();
+function goFullScreen() {
+    if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+        document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari và Opera
+        document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+        document.documentElement.msRequestFullscreen();
+    }
+}
+
+// Gọi hàm khi trang web đã tải xong hoặc khi người dùng nhấn vào một nút
+window.onload = function() {
+    goFullScreen();
+};
+
 
 
