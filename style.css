@@ -28,6 +28,34 @@ input {
         opacity: 1;
     }
 }
+    /* Toàn bộ trang có nền đen, chữ trắng */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Nội dung trang */
+.content {
+    text-align: center;
+    z-index: 10; /* Đảm bảo nội dung luôn ở trên tuyết */
+    position: relative;
+    padding-top: 100px;
+}
+
+/* Thêm các kiểu chữ */
+h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 24px;
+}
+
 
 
 
