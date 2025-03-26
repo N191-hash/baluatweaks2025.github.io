@@ -27,7 +27,7 @@ input {
     100% {
         opacity: 1;
     }
-}
+
     /* Toàn bộ trang có nền đen, chữ trắng */
 body {
     font-family: Arial, sans-serif;
@@ -37,24 +37,44 @@ body {
     height: 100vh;
     overflow: hidden;
 }
-
-/* Nội dung trang */
-.content {
-    text-align: center;
-    z-index: 10; /* Đảm bảo nội dung luôn ở trên tuyết */
-    position: relative;
-    padding-top: 100px;
+    /* Toàn bộ trang nền đen và chữ trắng */
+body {
+    background-color: #000000;  /* Nền màu đen */
+    color: #ffffff;  /* Chữ màu trắng */
+    font-family: Arial, sans-serif;  /* Phông chữ */
+    margin: 0;  /* Loại bỏ khoảng cách ngoài */
+    padding: 0;  /* Loại bỏ padding */
 }
 
-/* Thêm các kiểu chữ */
-h1 {
-    font-size: 48px;
-    margin: 20px 0;
+/* Đảm bảo rằng các phần tử container cũng sẽ có nền đen và chữ trắng */
+.container {
+    background-color: #000000;  /* Nền màu đen */
+    color: #ffffff;  /* Chữ màu trắng */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin: auto;
 }
 
-p {
-    font-size: 24px;
+/* Nút đăng nhập với màu sắc phù hợp */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #004A7F; /* Màu nền nút */
+    color: white;  /* Chữ trắng */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+/* Màu nền nút khi hover */
+button:hover {
+    background-color: #0094FF; /* Màu khi hover */
+    box-shadow: 0 0 10px rgba(0, 148, 255, 0.5);
+}
+
+
 
 
 
