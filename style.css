@@ -1,4 +1,4 @@
-body {
+mbody {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
@@ -58,5 +58,14 @@ button:hover {
     pointer-events: none; /* Không chặn thao tác nhập liệu */
     z-index: 9999; /* Đưa lên trên cùng */
 }
+.container {
+    display: flex;
+    flex-direction: column; /* Căn theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    height: 100vh; /* Chiều cao toàn màn hình */
+    text-align: center; /* Căn giữa nội dung chữ */
+}
+
 
 
