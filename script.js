@@ -69,4 +69,12 @@ function moveFlakes() {
 }
 
 drawSnowflakes();
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function (event) {
+        if (!confirm("Bạn có chắc muốn tải xuống tệp này không?")) {
+            event.preventDefault(); // Dừng tải file nếu người dùng chọn 'Không'
+        }
+    });
+});
+
 
