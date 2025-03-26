@@ -92,10 +92,18 @@ button:hover {
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
-body {
+html, body {
     background-color: black;
     color: white; /* Đổi màu chữ thành trắng để dễ đọc */
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+.container {
+    background: black; /* Nếu phần nội dung có nền khác, đổi luôn thành đen */
+    min-height: 100vh; /* Đảm bảo nó phủ toàn bộ chiều cao màn hình */
+}
+
 
 
 
