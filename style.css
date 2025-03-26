@@ -92,6 +92,11 @@ button:hover {
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
+body {
+    background-color: black;
+    color: white; /* Đổi màu chữ thành trắng để dễ đọc */
+}
+
 
 
 
