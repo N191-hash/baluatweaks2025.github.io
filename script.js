@@ -33,7 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
         loginBtn.style.display = "inline-block";
         logoutBtn.style.display = "none";
         privateContent.style.display = "none";
+        
     }
 });
+function goFullscreen() {
+  let docElm = document.documentElement;
+  if (docElm.requestFullscreen) {
+    docElm.requestFullscreen();
+  } else if (docElm.mozRequestFullScreen) {
+    docElm.mozRequestFullScreen();
+  } else if (docElm.webkitRequestFullscreen) {
+    docElm.webkitRequestFullscreen();
+  } else if (docElm.msRequestFullscreen) {
+    docElm.msRequestFullscreen();
+  }
+}
+
+window.onload = function() {
+  goFullscreen(); // Gọi hàm khi trang tải xong
+}
 
 
