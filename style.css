@@ -241,6 +241,10 @@ p {
 #error-message {
     color: white; /* Chữ màu trắng */
 }
+/* Thay đổi màu chữ dòng dưới "Config Master 3.0" thành trắng */
+.container p {
+    color: white; /* Hoặc #FFFFFF */
+}
 
   
 
