@@ -94,6 +94,25 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+.login-btn {
+    background-color: #673AB7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.login-btn:hover {
+    transform: translateX(2px);
+}
+
+.login-btn:active {
+    transform: translateX(-2px);
+}
+
 
 
 
