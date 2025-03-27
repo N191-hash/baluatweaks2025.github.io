@@ -133,6 +133,41 @@ ul li {
 button {
     margin-top: 20px; /* Tạo khoảng cách giữa danh sách và nút đăng xuất */
 }
+/* Khung nhập mật khẩu đẹp và căn giữa */
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Chỉnh cho nút đăng nhập */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Hiển thị thông báo lỗi */
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+
 
 
 
