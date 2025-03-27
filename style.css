@@ -1,78 +1,100 @@
-mbody {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 50px;
-}
-
-.login-container, .container {
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-input {
-    button:active {
-    transform: scale(0.95); /* Làm nút nhỏ lại khi nhấn */
-}
-.container {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-    100% {
-        opacity: 1;
-    }
-
-    /* Toàn bộ trang có nền đen, chữ trắng */
-body {
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: #000;
+/* Reset một số kiểu mặc định của trình duyệt */
+* {
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
 }
-    /* Toàn bộ trang nền đen và chữ trắng */
+
 body {
-    background-color: #000000;  /* Nền màu đen */
-    color: #ffffff;  /* Chữ màu trắng */
-    font-family: Arial, sans-serif;  /* Phông chữ */
-    margin: 0;  /* Loại bỏ khoảng cách ngoài */
-    padding: 0;  /* Loại bỏ padding */
-}
-
-/* Đảm bảo rằng các phần tử container cũng sẽ có nền đen và chữ trắng */
-.container {
-    background-color: #000000;  /* Nền màu đen */
-    color: #ffffff;  /* Chữ màu trắng */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Màu nền nhẹ nhàng */
+    color: #333; /* Màu chữ */
+    line-height: 1.6;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    margin: auto;
 }
 
-/* Nút đăng nhập với màu sắc phù hợp */
+h1, h2, h3 {
+    color: #4CAF50; /* Màu xanh lá cho tiêu đề */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Thêm hiệu ứng hover cho liên kết */
+a {
+    color: #2196F3; /* Màu xanh dương */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0b7dda; /* Màu xanh dương đậm khi hover */
+}
+
+/* Button */
 button {
+    background-color: #4CAF50; /* Màu nền xanh lá */
+    color: white;
     padding: 10px 20px;
-    font-size: 16px;
     border: none;
-    background-color: #004A7F; /* Màu nền nút */
-    color: white;  /* Chữ trắng */
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
-/* Màu nền nút khi hover */
 button:hover {
-    background-color: #0094FF; /* Màu khi hover */
-    box-shadow: 0 0 10px rgba(0, 148, 255, 0.5);
+    background-color: #45a049; /* Màu nền khi hover */
 }
+
+/* Các phần tử trong container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+/* Các hiệu ứng transition */
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1); /* Phóng to ảnh khi hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 
 
 
