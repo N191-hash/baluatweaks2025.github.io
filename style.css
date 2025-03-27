@@ -25,6 +25,7 @@ h1 {
 p {
     font-size: 1.1em;
     margin-bottom: 20px;
+    color: white; /* Màu chữ trắng */
 }
 
 /* Thêm hiệu ứng hover cho liên kết */
@@ -47,6 +48,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    width: 100%; /* Đảm bảo nút đăng nhập chiếm toàn bộ chiều rộng */
 }
 
 button:hover {
@@ -55,125 +57,16 @@ button:hover {
 
 /* Các phần tử trong container */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 40px;
-}
-
-/* Các hiệu ứng transition */
-img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.1); /* Phóng to ảnh khi hover */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-footer a {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-.login-btn {
-    background-color: #673AB7;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.login-btn:hover {
-    transform: translateX(2px);
-}
-
-.login-btn:active {
-    transform: translateX(-2px);
-}
-.container {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Căn giữa theo chiều dọc */
     align-items: center; /* Căn giữa theo chiều ngang */
     height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
     text-align: center; /* Căn giữa nội dung chữ */
-}
-
-ul {
-    list-style-type: none; /* Bỏ dấu chấm đầu dòng */
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0; /* Tạo khoảng cách giữa các mục */
-}
-
-button {
-    margin-top: 20px; /* Tạo khoảng cách giữa danh sách và nút đăng xuất */
-}
-/* Khung nhập mật khẩu đẹp và căn giữa */
-input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #555;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-}
-
-/* Chỉnh cho nút đăng nhập */
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Hiển thị thông báo lỗi */
-#error-message {
-    color: red;
-    margin-top: 10px;
-}
-/* Khung đăng nhập */
-.container {
     background-color: #333; /* Màu xám nhạt cho khung */
     padding: 30px;
     border-radius: 10px; /* Bo góc khung */
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* Đổ bóng nhẹ */
-    text-align: center;
     width: 350px;
     margin: 10vh auto; /* Căn giữa khung */
     border: 2px solid black; /* Viền ngoài màu đen */
@@ -201,13 +94,19 @@ button {
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
 }
 
 button:hover {
     background-color: #0056b3;
     border-color: black; /* Viền đen khi hover */
 }
+
+/* Hiển thị thông báo lỗi */
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+
 /* Hiệu ứng tuyết rơi */
 .snowflake {
     position: absolute;
@@ -227,13 +126,10 @@ button:hover {
         top: 100%;
         transform: translateX(300px);
     }
-    /* Thay đổi màu chữ của tiêu đề h2 */
-h2 {
-    color: white; /* Chữ màu trắng */
 }
 
-/* Thay đổi màu chữ của các đoạn văn bản */
-p {
+/* Thay đổi màu chữ của tiêu đề h2 */
+h2 {
     color: white; /* Chữ màu trắng */
 }
 
@@ -241,9 +137,23 @@ p {
 #error-message {
     color: white; /* Chữ màu trắng */
 }
+
 /* Thay đổi màu chữ dòng dưới "Config Master 3.0" thành trắng */
 .container p {
     color: white; /* Hoặc #FFFFFF */
+}
+
+/* Các hiệu ứng transition */
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1); /* Phóng to ảnh khi hover */
 }
 
   
