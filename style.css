@@ -14,7 +14,7 @@ body {
 }
 
 h1, h2, h3 {
-    color: #4CAF50; /* Màu xanh lá cho tiêu đề */
+    color: #FFFFFF; /* Màu trắng cho tiêu đề */
 }
 
 h1 {
@@ -227,7 +227,23 @@ button:hover {
         top: 100%;
         transform: translateX(300px);
     }
+    /* Thay đổi màu chữ của tiêu đề h2 */
+h2 {
+    color: white; /* Chữ màu trắng */
 }
+
+/* Thay đổi màu chữ của các đoạn văn bản */
+p {
+    color: white; /* Chữ màu trắng */
+}
+
+/* Thay đổi màu chữ của các thông báo lỗi */
+#error-message {
+    color: white; /* Chữ màu trắng */
+}
+
+  
+
 
 
 
