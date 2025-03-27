@@ -112,6 +112,27 @@ footer a:hover {
 .login-btn:active {
     transform: translateX(-2px);
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+    text-align: center; /* Căn giữa nội dung chữ */
+}
+
+ul {
+    list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0; /* Tạo khoảng cách giữa các mục */
+}
+
+button {
+    margin-top: 20px; /* Tạo khoảng cách giữa danh sách và nút đăng xuất */
+}
 
 
 
