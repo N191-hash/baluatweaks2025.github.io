@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("loggedIn", "true");
             showLoggedInContent();
         } else {
-            alert("Mật khẩu sai, vui lòng thử lại!");
+            alert("Key Sai Mua Ib Zalo 0399978176!");
         }
     });
 
@@ -46,89 +46,30 @@ function goFullscreen() {
     docElm.webkitRequestFullscreen();
   } else if (docElm.msRequestFullscreen) {
     docElm.msRequestFullscreen();
-  }
+  
 }
 
 window.onload = function() {
   goFullscreen(); // Gọi hàm khi trang tải xong
 }
-// Thiết lập canvas
-var canvas = document.getElementById("snowCanvas");
-var ctx = canvas.getContext("2d");
-
-// Đặt kích thước canvas cho phù hợp với cửa sổ trình duyệt
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-// Tạo mảng bông tuyết
-var snowflakes = [];
-
-// Tạo đối tượng bông tuyết
-function Snowflake(x, y, size, speed) {
-    this.x = x;
-    this.y = y;
-    this.size = size;
-    this.speed = speed;
-}
-
-// Tạo bông tuyết ngẫu nhiên
-function createSnowflakes() {
-    for (var i = 0; i < 100; i++) {
-        var size = Math.random() * 5 + 2; // Kích thước bông tuyết
-        var speed = Math.random() * 3 + 1; // Tốc độ rơi
-        var x = Math.random() * canvas.width; // Vị trí x ngẫu nhiên
-        var y = Math.random() * canvas.height; // Vị trí y ngẫu nhiên
-        snowflakes.push(new Snowflake(x, y, size, speed));
-    }
-}
-
-// Vẽ các bông tuyết trên canvas
-function drawSnowflakes() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Xóa canvas mỗi lần vẽ lại
-
-    for (var i = 0; i < snowflakes.length; i++) {
-        var snowflake = snowflakes[i];
-        ctx.beginPath();
-        ctx.arc(snowflake.x, snowflake.y, snowflake.size, 0, Math.PI * 2);
-        ctx.fillStyle = "#fff"; // Màu trắng cho bông tuyết
-        ctx.fill();
-        
-        // Di chuyển bông tuyết xuống dưới
-        snowflake.y += snowflake.speed;
-
-        // Nếu bông tuyết rơi ra khỏi màn hình thì đặt lại vị trí
-        if (snowflake.y > canvas.height) {
-            snowflake.y = -snowflake.size;
-            snowflake.x = Math.random() * canvas.width;
+<script>
+    // Tạo hiệu ứng tuyết rơi
+    function createSnowflakes() {
+        var snowflakeCount = 100; // Số lượng tuyết rơi
+        for (var i = 0; i < snowflakeCount; i++) {
+            var snowflake = document.createElement('div');
+            snowflake.innerHTML = '❄'; // Dấu hiệu tuyết
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + 'vw'; // Đặt vị trí ngẫu nhiên
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Thời gian rơi ngẫu nhiên
+            snowflake.style.animationDelay = Math.random() * 5 + 's'; // Độ trễ ngẫu nhiên
+            document.body.appendChild(snowflake);
         }
     }
-}
 
-// Cập nhật và vẽ lại liên tục
-function update() {
-    drawSnowflakes();
-    requestAnimationFrame(update); // Đảm bảo hiệu ứng liên tục
-}
-
-// Bắt đầu tạo tuyết và cập nhật liên tục
-createSnowflakes();
-update();
-function goFullScreen() {
-    if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) { // Firefox
-        document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari và Opera
-        document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-        document.documentElement.msRequestFullscreen();
-    }
-}
-
-// Gọi hàm khi trang web đã tải xong hoặc khi người dùng nhấn vào một nút
-window.onload = function() {
-    goFullScreen();
-};
+    // Gọi hàm tạo tuyết rơi khi trang tải xong
+    window.onload = createSnowflakes;
+</script>
 
 
 
