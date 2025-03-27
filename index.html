@@ -1,35 +1,39 @@
-i<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
-<head> <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Config Master 3.0</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
-
+</head>
 <body>
     <div class="container">
         <h2>Config Master 3.0 ⚙️</h2>
-        <p>BaluatTweaks Co Dep Trai Khong?!</p>
+        <p>Baluat Tweaks</p>
 
-        <button id="loginBtn">Login</button>
+        <form id="loginForm">
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Đăng nhập</button>
+        </form>
 
-        <button id="logoutBtn" style="display: none;">Out</button>
-
-        <!-- Nội dung chỉ hiển thị sau khi đăng nhập -->
-        <div id="privateContent" style="display: none;">
-            <h2>Danh sách cấu hình</h2>
-            <ul>
-                <li><a href="https://www.mediafire.com/file/fhp19nnxn50ccmt/CONFIG+MASTER+1.5📩.crt/file" target="_blank">Dowload Config 1.5📩</a></li>
-                <li><a href="https://www.mediafire.com/file/9evdec6lj69anc9/DPISUPPORTCONFIGDEV🔥.accessibilityPunctuationGroup/file" target="_blank">Dowload Dấu Câu☎️ </a></li>
-    
-            </ul>
-        </div>
+        <p id="error-message" style="color: red; display: none;">Sai mật khẩu, thử lại!</p>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Ngăn chặn tải lại trang
+
+            var passwordInput = document.getElementById("password").value;
+            var correctPassword = "123456"; // Thay bằng mật khẩu bạn muốn
+
+            if (passwordInput === correctPassword) {
+                window.location.href = "config.html"; // Chuyển hướng đến trang config.html
+            } else {
+                document.getElementById("error-message").style.display = "block"; // Hiển thị lỗi
+            }
+        });
+    </script>
 </body>
 </html>
+
